@@ -1,7 +1,7 @@
 const animaisDB = require('../../../repository/animaisDB')
 const animaisGetOneUseCase = require('../../../usecase/animaisGetOneUseCase')
 
-module.exports = function animaisGetOneUseCase (req, res){
+module.exports = function animaisGetOneController (req, res){
     try{
         const { index } = req.params
         const getOne = animaisGetOneUseCase(animaisDB, index)

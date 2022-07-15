@@ -1,6 +1,7 @@
 const express = require('express')
 const animaisGetAllController = require('../controller/animaisGetAllController')
 const animaisGetOneController = require('../controller/animaisGetOneController')
+const animaisPutOneController = require('../controller/animaisPutOneController')
 
 var router = express.Router()
 
@@ -10,8 +11,20 @@ router.get("/animais", (req, res) => {
 })
 
 // Retornando um animal
-router.get("animais/:index", (req, res) => {
+router.get("/animais/:index", (req, res) => {
     return animaisGetOneController(req, res)
+})
+
+router.put("/animais/:index", (req, res) => {
+    return animaisPutOneController(req, res)
+})
+
+router.post("/animais/:index", (req, res) => {
+    return animaisPutOneController(req, res)
+})
+
+router.delete("/animais/:index", (req, res) => {
+    return animaisPutOneController(req, res)
 })
 
 
