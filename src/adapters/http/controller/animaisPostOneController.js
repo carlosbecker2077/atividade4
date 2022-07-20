@@ -3,8 +3,8 @@ const animaisPostOneUseCase = require('../../../usecase/animaisPostOneUseCase')
 
 module.exports = function animaisPostOneController (req, res){
     try{
-        const { newAnimal } = req.body
-        const postOne = animaisPostOneUseCase(animaisDB, newAnimal)
+        const { id, animal, nome, especie, idade, peso } = req.body
+        const postOne = animaisPostOneUseCase(animaisDB, id, animal, nome, especie, idade, peso)
         return res.status(200).json(postOne)
     } catch (error) {
         return res.status(500).json({errorMessage: error.message})
