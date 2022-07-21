@@ -1,3 +1,8 @@
-module.exports = function animaisGetAllUseCase(animais, index) {
-    return animais[index]
+const animaisDB = require('../repository/animaisDB')
+
+module.exports = function animaisGetOneUseCase(id) {
+    const animal = animaisDB.filter( (item) =>{
+        return item.id === id
+    })
+    return animal
 }

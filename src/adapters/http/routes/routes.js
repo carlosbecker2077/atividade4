@@ -13,7 +13,7 @@ router.get("/animais", (req, res) => {
 })
 
 // Retornando um animal
-router.get("/animais/:index", (req, res) => {
+router.get("/animais/:id", (req, res) => {
     return animaisGetOneController(req, res)
 })
 
