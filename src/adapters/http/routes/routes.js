@@ -17,7 +17,7 @@ router.get("/animals/:id", (req, res) => {
     return animalsGetOneController(req, res)
 })
 
-router.put("/animals/:index", (req, res) => {
+router.put("/animals/:id", (req, res) => {
     return animalsPutOneController(req, res)
 })
 
@@ -25,7 +25,7 @@ router.post("/animals", (req, res) => {
     return animalsPostOneController(req, res)
 })
 
-router.delete("/animals/:index", (req, res) => {
+router.delete("/animals/:id", (req, res) => {
     return animalsDeleteOneController(req, res)
 })
 

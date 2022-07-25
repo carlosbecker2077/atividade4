@@ -1,3 +1,5 @@
-module.exports = function animalsGetAllUseCase(animals) {
-    return animals
+const animalsDB = require('../../../repository/animalsDB')
+
+module.exports = function animalsGetAllUseCase(animalsDB) {
+    return animalsDB
 }
