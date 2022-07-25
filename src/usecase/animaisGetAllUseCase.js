@@ -1,3 +1,3 @@
-module.exports = function animaisGetAllUseCase(animais) {
-    return animais
+module.exports = function animalsGetAllUseCase(animals) {
+    return animals
 }

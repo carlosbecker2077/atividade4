@@ -1,7 +1,7 @@
 const { v4: uuidv4 } = require('uuid');
 
-module.exports = function animaisPostOneUseCase (animais, animal, nome, especie, idade, peso){
+module.exports = function animalsPostOneUseCase (animals, animal, name, species, age, weigth){
     const id = uuidv4()
-    animais.push({id, animal, nome, especie, idade, peso})
+    animals.push({id, animal, name, species, age, weigth})
     return id
 }

@@ -1,32 +1,32 @@
 const express = require('express')
-const animaisGetAllController = require('../controller/animaisGetAllController')
-const animaisGetOneController = require('../controller/animaisGetOneController')
-const animaisPutOneController = require('../controller/animaisPutOneController')
-const animaisPostOneController = require('../controller/animaisPostOneController')
-const animaisDeleteOneController = require('../controller/animaisDeleteOneController')
+const animalsGetAllController = require('../controller/animalsGetAllController')
+const animalsGetOneController = require('../controller/animalsGetOneController')
+const animalsPutOneController = require('../controller/animalsPutOneController')
+const animalsPostOneController = require('../controller/animalsPostOneController')
+const animalsDeleteOneController = require('../controller/animalsDeleteOneController')
 
 var router = express.Router()
 
-// Retornando todos os animais
-router.get("/animais", (req, res) => {
-    return animaisGetAllController(req, res)
+// Retornando todos os animals
+router.get("/animals", (req, res) => {
+    return animalsGetAllController(req, res)
 })
 
 // Retornando um animal
-router.get("/animais/:id", (req, res) => {
-    return animaisGetOneController(req, res)
+router.get("/animals/:id", (req, res) => {
+    return animalsGetOneController(req, res)
 })
 
-router.put("/animais/:index", (req, res) => {
-    return animaisPutOneController(req, res)
+router.put("/animals/:index", (req, res) => {
+    return animalsPutOneController(req, res)
 })
 
-router.post("/animais", (req, res) => {
-    return animaisPostOneController(req, res)
+router.post("/animals", (req, res) => {
+    return animalsPostOneController(req, res)
 })
 
-router.delete("/animais/:index", (req, res) => {
-    return animaisDeleteOneController(req, res)
+router.delete("/animals/:index", (req, res) => {
+    return animalsDeleteOneController(req, res)
 })
 
 
